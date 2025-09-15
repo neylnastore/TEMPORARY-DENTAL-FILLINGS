@@ -1,1 +1,680 @@
-sddd
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPORARY DENTAL FILLINGS - Solusi Gigi Praktis</title>
+    <link rel="icon" type="image/x-icon" href="https://marketplace.canva.com/EAFzZ7HIqYo/1/0/1600w/canva-blue-and-white-minimal-dental-care-logo-D-_h-rJgSAk.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            animation: zoom 0.6s;
+        }
+        
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #bbb;
+        }
+        
+        .popup-order {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 15px;
+            z-index: 1000;
+            animation: slideIn 0.5s ease-out;
+            max-width: 300px;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .strike-through {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://marketplace.canva.com/EAFzZ7HIqYo/1/0/1600w/canva-blue-and-white-minimal-dental-care-logo-D-_h-rJgSAk.jpg" alt="DENTAL CARE" class="h-10 w-auto mr-3">
+                <span class="text-xl font-bold text-blue-600">DENTAL CARE</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#tentang" class="text-gray-700 hover:text-blue-600 transition">Tentang</a>
+                <a href="#manfaat" class="text-gray-700 hover:text-blue-600 transition">Manfaat</a>
+                <a href="#cara-pakai" class="text-gray-700 hover:text-blue-600 transition">Cara Pakai</a>
+                <a href="#testimoni" class="text-gray-700 hover:text-blue-600 transition">Testimoni</a>
+            </nav>
+            <button class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">TEMPORARY DENTAL FILLINGS</h1>
+                <p class="text-xl text-gray-600 mb-6">Solusi Praktis untuk Masalah Gigi dalam Hitungan Menit!</p>
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                            <i data-feather="check-circle" class="text-green-600"></i>
+                        </div>
+                        <p class="text-gray-700">Food Grade & Teruji Klinis</p>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                            <i data-feather="check-circle" class="text-green-600"></i>
+                        </div>
+                        <p class="text-gray-700">Aman dan Nyaman Digunakan</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                            <i data-feather="check-circle" class="text-green-600"></i>
+                        </div>
+                        <p class="text-gray-700">Hasil Instant dalam 5 Menit</p>
+                    </div>
+                </div>
+                <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="text-red-500 mr-2 mt-1"></i>
+                        <p class="text-red-600 font-medium">PROMO BERAKHIR DALAM: <span id="countdown" class="font-bold">23:59:59</span></p>
+                    </div>
+                </div>
+                <a href="#beli" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg inline-flex items-center justify-center transition pulse">
+                    BELI SEKARANG JUGA
+                    <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <img src="https://cdn.orderonline.id/uploads/images_6755551757923057530.png" alt="Temporary Dental Fillings" class="rounded-lg shadow-xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Masalah & Solusi -->
+    <section id="tentang" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Masalah Gigi? Jangan Khawatir!</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <div class="bg-red-50 p-6 rounded-lg shadow mb-6">
+                        <h3 class="text-xl font-semibold text-red-600 mb-4 flex items-center">
+                            <i data-feather="alert-circle" class="mr-2"></i> Permasalahan Umum
+                        </h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Gigi berlubang menyebabkan rasa sakit dan tidak nyaman</li>
+                            <li>Gigi patah atau retak mengganggu penampilan</li>
+                            <li>Gigi ompong membuat sulit mengunyah makanan</li>
+                            <li>Harus menunggu lama untuk perawatan dokter gigi</li>
+                            <li>Biaya perawatan gigi yang mahal</li>
+                        </ul>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="bg-green-50 p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold text-green-600 mb-4 flex items-center">
+                            <i data-feather="check-circle" class="mr-2"></i> Solusi Praktis
+                        </h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Temp Tooth sebagai penambal gigi sementara yang efektif</li>
+                            <li>Mengisi gigi yang renggang dengan mudah</li>
+                            <li>Menyambung gigi patah secara instan</li>
+                            <li>Pengganti gigi yang hilang sementara</li>
+                            <li>Solusi cepat sebelum perawatan dokter gigi</li>
+                            <li>Harga terjangkau dibanding perawatan dokter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manfaat Produk -->
+    <section id="manfaat" class="py-16 gradient-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Manfaat Temporary Dental Fillings</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow text-center" data-aos="flip-left" data-aos-delay="100">
+                    <div class="bg-blue-100 p-4 rounded-full inline-flex mb-4">
+                        <i data-feather="package" class="text-blue-600 h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pengganti Gigi</h3>
+                    <p class="text-gray-600">Solusi praktis untuk gigi yang hilang atau ompong</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center" data-aos="flip-left" data-aos-delay="200">
+                    <div class="bg-blue-100 p-4 rounded-full inline-flex mb-4">
+                        <i data-feather="tool" class="text-blue-600 h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Penambal Gigi</h3>
+                    <p class="text-gray-600">Menambal gigi berlubang dengan hasil yang rapi</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center" data-aos="flip-left" data-aos-delay="300">
+                    <div class="bg-blue-100 p-4 rounded-full inline-flex mb-4">
+                        <i data-feather="shield" class="text-blue-600 h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Penyambung Gigi</h3>
+                    <p class="text-gray-600">Menyambung gigi patah dengan kekuatan maksimal</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center" data-aos="flip-left" data-aos-delay="400">
+                    <div class="bg-blue-100 p-4 rounded-full inline-flex mb-4">
+                        <i data-feather="award" class="text-blue-600 h-8 w-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Super Kuat</h3>
+                    <p class="text-gray-600">Material khusus yang tahan lama dan kuat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Produk -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Galeri Produk</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="cursor-pointer" onclick="openModal('modal1')" data-aos="zoom-in">
+                    <img src="https://cdn.orderonline.id/uploads/images_5713251757923056652.png" alt="Temporary Dental Fillings" class="product-image rounded-lg shadow w-full">
+                </div>
+                <div class="cursor-pointer" onclick="openModal('modal2')" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://cdn.orderonline.id/uploads/images_7186561757923057155.png" alt="Temporary Dental Fillings" class="product-image rounded-lg shadow w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Images -->
+    <div id="modal1" class="modal">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <img class="modal-content" id="img01" src="https://cdn.orderonline.id/uploads/images_5713251757923056652.png">
+    </div>
+
+    <div id="modal2" class="modal">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <img class="modal-content" id="img02" src="https://cdn.orderonline.id/uploads/images_7186561757923057155.png">
+    </div>
+
+    <!-- Cara Penggunaan -->
+    <section id="cara-pakai" class="py-16 gradient-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Cara Penggunaan yang Mudah</h2>
+            <div class="grid md:grid-cols-6 gap-6">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <span class="text-blue-600 font-bold text-xl">1</span>
+                    </div>
+                    <p class="text-gray-700">Siapkan air panas</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <span class="text-blue-600 font-bold text-xl">2</span>
+                    </div>
+                    <p class="text-gray-700">Ambil 12-15 butir TempTooth</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <span class="text-blue-600 font-bold text-xl">3</span>
+                    </div>
+                    <p class="text-gray-700">Tunggu hingga transparan</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <span class="text-blue-600 font-bold text-xl">4</span>
+                    </div>
+                    <p class="text-gray-700">Cetak bentuk gigi palsu</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <span class="text-blue-600 font-bold text-xl">5</span>
+                    </div>
+                    <p class="text-gray-700">Bilas dengan air biasa</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-white rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <span class="text-blue-600 font-bold text-xl">6</span>
+                    </div>
+                    <p class="text-gray-700">Pasang di bagian yang diperlukan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section id="testimoni" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Apa Kata Pelanggan Kami?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-500 avatar mr-3">AS</div>
+                        <div>
+                            <h4 class="font-semibold">Ahmad S.</h4>
+                            <p class="text-sm text-gray-500">Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                    </div>
+                    <p class="text-gray-600">"Gigi saya patah saat makan, TempTooth sangat membantu. Sekarang bisa tersenyum dengan percaya diri lagi!"</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-500 avatar mr-3">SD</div>
+                        <div>
+                            <h4 class="font-semibold">Sari D.</h4>
+                            <p class="text-sm text-gray-500">Bandung</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                    </div>
+                    <p class="text-gray-600">"Anak saya gigis dan sering sakit gigi. Dengan TempTooth, saya bisa menambal giginya sementara sebelum ke dokter."</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-500 avatar mr-3">BW</div>
+                        <div>
+                            <h4 class="font-semibold">Budi W.</h4>
+                            <p class="text-sm text-gray-500">Surabaya</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                    </div>
+                    <p class="text-gray-600">"Sebagai salesman, penampilan sangat penting. TempTooth membantu saya mengatasi gigi ompong dengan cepat."</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 avatar mr-3">RM</div>
+                        <div>
+                            <h4 class="font-semibold">Rina M.</h4>
+                            <p class="text-sm text-gray-500">Yogyakarta</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                        <i data-feather="star" class="fill-current"></i>
+                    </div>
+                    <p class="text-gray-600">"Harus presentasi besok tapi gigi depan patah. TempTooth menyelamatkan hari saya! Hasilnya natural sekali."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="beli" class="py-16 gradient-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6" data-aos="fade-up">Dapatkan TempTooth Sekarang!</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up">Jangan biarkan masalah gigi mengganggu aktivitas Anda. Dapatkan solusi praktis dengan TempTooth sekarang juga.</p>
+            
+            <div class="bg-white rounded-xl shadow-xl p-8 max-w-4xl mx-auto" data-aos="zoom-in">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                        <img src="https://cdn.orderonline.id/uploads/images_6755551757923057530.png" alt="TempTooth" class="w-48 h-48 object-contain">
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Temporary Dental Fillings</h3>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-3">
+                                <span id="viewers">1274</span> sedang melihat
+                            </div>
+                            <div class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+                                Stok: <span id="stock">58</span> tersisa
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h4 class="font-semibold text-blue-800">Paket Biasa</h4>
+                                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">1000 Butir</span>
+                                    </div>
+                                    <div class="flex items-end">
+                                        <div class="mr-3">
+                                            <p class="text-gray-500 text-sm">Harga Normal:</p>
+                                            <p class="strike-through text-gray-400">Rp 208.500</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Harga Promo:</p>
+                                            <p class="text-red-600 font-bold text-xl">Rp 139.000</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-2">Hanya <span class="text-red-600 font-semibold">Rp 139</span>/butir!</p>
+                                </div>
+                                
+                                <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h4 class="font-semibold text-green-800">Paket Hemat</h4>
+                                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">2000 Butir</span>
+                                    </div>
+                                    <div class="flex items-end">
+                                        <div class="mr-3">
+                                            <p class="text-gray-500 text-sm">Harga Normal:</p>
+                                            <p class="strike-through text-gray-400">Rp 252.000</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-gray-500 text-sm">Harga Promo:</p>
+                                            <p class="text-red-600 font-bold text-xl">Rp 168.000</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-2">Hanya <span class="text-red-600 font-semibold">Rp 84</span>/butir!</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                            <div class="flex items-center">
+                                <i data-feather="gift" class="text-yellow-600 mr-2"></i>
+                                <p class="text-yellow-700 font-medium">BONUS: Gratis panduan penggunaan digital!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- OrderOnline Embed Form -->
+                <div class="ooef">
+                    <form class="orderonline-embed-form" data-username="vera" data-product-slug="temporary-dental-fillings" data-product-id="68c7c6a119bc0bb71d012df2" id="oo-embed-form-temporary-dental-fillings-573" data-origin="orderonline">
+                        <div class="ooef-loader">
+                            <style>
+                                .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
+                                @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
+                                .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
+                                .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
+                                @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                            </style>
+                            <div aria-live="polite" role="status"><div>Loading...</div></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <img src="https://marketplace.canva.com/EAFzZ7HIqYo/1/0/1600w/canva-blue-and-white-minimal-dental-care-logo-D-_h-rJgSAk.jpg" alt="DENTAL CARE" class="h-10 w-auto mr-3">
+                        <span class="text-xl font-bold">DENTAL CARE</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Solusi Kesehatan Gigi Terpercaya</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">© 2023 Dental Care. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fake Order Popup -->
+    <div id="orderPopup" class="popup-order hidden">
+        <div class="flex justify-between items-start mb-3">
+            <div class="flex items-center">
+                <div class="bg-blue-500 avatar mr-3" id="popupAvatar">RS</div>
+                <div>
+                    <p class="font-semibold text-sm" id="popupName">Rina S.</p>
+                    <p class="text-xs text-gray-500" id="popupLocation">Jakarta</p>
+                </div>
+            </div>
+            <button onclick="closePopup()" class="text-gray-400 hover:text-gray-600">
+                <i data-feather="x" class="h-4 w-4"></i>
+            </button>
+        </div>
+        <p class="text-sm text-gray-700">Baru saja membeli <span class="font-semibold">TempTooth</span></p>
+    </div>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
+            
+            const difference = endOfDay - now;
+            
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').innerHTML = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Dynamic Counters
+        function updateCounters() {
+            const viewers = Math.floor(Math.random() * 50) + 1250;
+            const stock = Math.floor(Math.random() * 10) + 50;
+            
+            document.getElementById('viewers').textContent = viewers;
+            document.getElementById('stock').textContent = stock;
+        }
+        
+        setInterval(updateCounters, 60000);
+        updateCounters();
+        
+        // Modal Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        // Fake Order Popup
+        const names = ['Budi', 'Sari', 'Ahmad', 'Dewi', 'Rina', 'Joko', 'Maya', 'Agus'];
+        const locations = ['Jakarta', 'Bandung', 'Surabaya', 'Yogyakarta', 'Medan', 'Semarang', 'Makassar', 'Bali'];
+        
+        function showPopup() {
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+            
+            document.getElementById('popupAvatar').textContent = randomName.charAt(0);
+            document.getElementById('popupName').textContent = randomName + '.';
+            document.getElementById('popupLocation').textContent = randomLocation;
+            
+            const popup = document.getElementById('orderPopup');
+            popup.classList.remove('hidden');
+            
+            setTimeout(() => {
+                popup.classList.add('hidden');
+            }, 5000);
+        }
+        
+        function closePopup() {
+            document.getElementById('orderPopup').classList.add('hidden');
+        }
+        
+        // Show popup after 3 seconds
+        setTimeout(showPopup, 3000);
+        
+        // Show popup every 30 seconds
+        setInterval(showPopup, 30000);
+        
+        // OrderOnline Embed Script
+        if (typeof xLogError != 'function') {
+            var xLogError = function (error) {
+                var req = new XMLHttpRequest();
+                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                req.open('POST', 'https://api.orderonline.id/log', true);
+                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                req.send(params);
+            };
+        }
+        
+        try {
+            if (typeof xEmbedScript != 'function') {
+                var xEmbedScript = function () {
+                    !function(w, d, e, v, id, t, s) {
+                        if (d.getElementById(id)) return;
+                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                        s = d.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s);
+                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                };
+            }
+            
+            if (typeof xEmbedInit != 'function') {
+                var xEmbedInit = function (w, n) {
+                    if (w.ooe) return;
+                    n = w.ooe = function() {
+                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    };
+                    if (!w._ooe) w._ooe = n;
+                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                };
+            }
+            
+            xEmbedInit(window);
+            ooe('setup', 'redirect', 'https://vera.orderonline.id');
+            ooe('init', '5f1a7807a9bf807d6c63d963', '68c7c6a119bc0bb71d012df2', '68c7c6a119bc0bb71d012df3', 'oo-embed-form-temporary-dental-fillings-573', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false});
+            
+            if (!window.jQuery) {
+                !function(w, d, e, v, id, t, s) {
+                    if (d.getElementById(id)) return;
+                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                    t.addEventListener('load', xEmbedScript);
+                    s = d.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t, s);
+                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+            } else {
+                xEmbedScript();
+            }
+        } catch (e) {
+            xLogError(e);
+            throw e;
+        }
+    </script>
+</body>
+</html>
